@@ -1,8 +1,4 @@
-#include<iostream>
-#include<vector>
-#include<list>
-#include<deque>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
 //#include <boost/math/common_factor.hpp> 
 void display(std::deque<int> dq)
