@@ -1,0 +1,116 @@
+STL has four components
+
+    Algorithms
+    Containers
+    Functions
+    Iterators
+
+Containerss.....
+  for store data 
+  1-sequence Containers
+     *vector
+     *list
+     *deque
+     *arrays
+     *forward_list
+
+  2-Containers Adoptors
+     *queue
+     *priority_queue
+     *stack
+
+  3-Associative Containers
+     *set
+     *multiset
+     *map
+     *multimap
+
+
+   4-Unorderd Containers 
+     *Unorderd_set
+     *Unorderd_multiset
+     *Unorderd_map
+     *Unorderd_multiset
+
+
+
+
+    vectors
+      same as dynamic arrays with ability to resize itself automatically when an element is inserted or deleted .Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators.
+       In vectors, data is inserted at the end. Inserting at the end takes differential time, as sometimes there may be a need of extending the array. Removing the last element takes only constant time because no resizing happens.
+        Inserting and erasing at the beginning or in the middle is linear in time.
+      vector<datatype> name {data}
+      as-  vector<int> myvector {12,56,78,98,36,22};
+           vector<string>str {"my","name","is","tejpratap"};
+      
+      Iterators
+      vector::begin()         pointed to first element
+      vector::end()           pointed to next to last element
+      vector::rbegin()        pointed to last element (reverse order )
+      vector::rend()          pointed to next to first element(reverse order )
+     
+
+     capacity
+      vector::size()          return current size of vector
+      vector::max_size()      return max_size of vectore that can hold data 
+      vector::capacity()      Returns the size of the storage space currently allocated to the vector expressed as number of elements.
+      vector::resize(n)       Resizes the container so that it contains ‘n’ elements. 
+      vector::empty()         Returns whether the container is empty.
+      vector::shrink_to_fit() Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity.
+      
+     Accessing 
+       myvector[indexno.]
+       myvector.at(indexno.)
+       myvector.front()
+       myvector.back()
+       vector_element.data()  Returns a direct pointer to the memory array used internally by the vector to store its owned elements.
+    
+     
+     Modifire 
+       vector:: assign()     vectorname.assign(int size, int value)
+                             vectorname.assign(arr, arr + size)    //assignning through arr or list
+                             vectorname.assign(InputIterator first, InputIterator last)   //through vectors
+       vector::push_back(n)
+       vector::pop_back()
+       vector::insert(position,size(default=1) ,value)   insert value before the given position element
+       vector::erase(startingposition, *endingposition)  
+       vector::clear()   
+       vect1.swap(vect2)       swap elements of both vectors 
+       
+   list...
+       Lists are sequence containers that allow non-contiguous memory allocation. 
+       As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick. Normally, when we say a List, we talk about doubly linked list.
+    For implementing a singly linked list, we use forward list.
+         
+     list<datatype> name;
+
+     functions and methods
+     list::front()
+     list::back()
+     list::push_front(g)
+     list::push_back(g)
+     list::pop_front()
+     list::pop_back()
+     list::begin()
+     list::end()
+     list::rbegin()
+     list::rend()
+     list::empty()
+     list::insert(pos_iter, ele_num, ele)
+     list::erase(iterator position) or list::erase(iterator first, iterator last)
+     list::assign()
+     list::remove()   remove all element of list
+     list::remove(val)  remove el whose value is val
+     list::remove_if(function return true )  if on value function return true remove element 
+     list::clear()
+     list::reverse()
+     list::sort()
+     list::resize()
+     list::max_size()
+
+     list::operator=
+        listname1 = (listname2)   assign list 1 same as 2
+    list::swap()
+    list::splice()
+    list2.merge(list1)   merge list1 in list2 //list2=list2+list1
+
